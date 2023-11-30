@@ -1,20 +1,3 @@
-Additionally, consider providing technical guidance like build instructions, coding conventions, or a project roadmap in the CONTRIBUTING.md file.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Contributing
 
 [fork]: https://github.com/github/mysql-conf-diff/fork
@@ -34,6 +17,14 @@ These are one time installations required to be able to test your changes locall
 
 1. install Go [through download](https://go.dev/doc/install) | [through Homebrew](https://formulae.brew.sh/formula/go)
 1. [install golangci-lint](https://golangci-lint.run/usage/install/#local-installation)
+
+## Building and testing code
+
+...
+
+## Coding conventions
+
+...
 
 ## Submitting a pull request
 
