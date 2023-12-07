@@ -4,9 +4,9 @@ _Description_:
 
 `mysql-conf-diff` is a utility tool designed for database administrators and developers working with MySQL. It compares my.cnf configuration files on disk with settings of a running MySQL server, highlighting any differences. It's particularly useful for ensuring consistency in MySQL server configurations. Written in Go, it differs from similar tools by its ability to apply detected configuration changes directly to the server and its support for version-specific configuration blocks.
 
-+_Current project status_:
+_Current project status_:
 
-The project is open to pull requests and the utilitty is actively used in production at GitHub.
+The project is open to pull requests and the utility is actively used in production at GitHub.
 
 _Features_:
 1. Compares `my.cnf` files with live MySQL server settings.
@@ -38,14 +38,14 @@ you run `--apply-changes` you need to use `--watch-options` as well:
 **Development Roadmap and Contributions**
 
 _Development Roadmap_:
-The project maintains a high-level development roadmap to guide future enhancements and improvements. This roadmap outlines the key milestones we aim to achieve and the features we plan to implement. For a detailed view of our open issues, please refer to our [tracker](https://github.com/github/mysql-conf-diff/issues).
+For a detailed view of our open issues, please refer to our [tracker](https://github.com/github/mysql-conf-diff/issues). Please feel free to submit feature requests or bugs.
 
 _Contributions_:
-We highly value contributions from the community and encourage developers, database administrators, and other interested individuals to contribute to `mysql-conf-diff`. Whether it's by reporting bugs, suggesting enhancements, or submitting code changes, your input is crucial to the growth and improvement of this tool. 
+We highly value contributions from the community and encourage developers, database administrators, and other interested individuals to contribute to `mysql-conf-diff`. Whether it's by reporting bugs, suggesting enhancements, or submitting code changes, your input is important to the growth and improvement of this tool. 
 
 For detailed guidelines on how to contribute, please see our [CONTRIBUTING.md](CONTRIBUTING.md). This document provides all the information you need to get started with contributing to `mysql-conf-diff`, including coding standards, pull request processes, and how to set up your development environment.
 
-Your contributions are not only welcomed but also greatly appreciated as they play a vital role in the continued development and success of `mysql-conf-diff`.
+Your contributions are welcomed and greatly appreciated.
 
 ## Requirements
 
