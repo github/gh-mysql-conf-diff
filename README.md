@@ -30,7 +30,7 @@ By default the utility runs in read only (informational mode). To apply the
 changes, use the `--apply-changes` flag. This is not enabled by default. If
 you run `--apply-changes` you need to use `--watch-options` as well:
 
-	$ db-mysql-conf-diff /etc/mysql/my.cnf localhost:3306 \
+	$ mysql-conf-diff /etc/mysql/my.cnf localhost:3306 \
 	   --watch-options connect_timeout,delay_key_write --apply-changes
 
 ## Background 
@@ -46,32 +46,6 @@ We highly value contributions from the community and encourage developers, datab
 For detailed guidelines on how to contribute, please see our [CONTRIBUTING.md](CONTRIBUTING.md). This document provides all the information you need to get started with contributing to `mysql-conf-diff`, including coding standards, pull request processes, and how to set up your development environment.
 
 Your contributions are welcomed and greatly appreciated.
-
-## Requirements
-
-**Environment Setup and External Dependencies**
-
-_Environment Requirements_:
-To run db-mysql-conf-diff, you need an environment capable of running Go (Golang) applications. The minimum requirements are:
-
-1. **Go (Golang) Environment**: The tool is developed in Go, so you need to have Go installed on your system. Ensure you have the latest stable version of Go for optimal performance and compatibility.
-2. **MySQL Server Access**: As the tool interacts with MySQL servers, you must have network access to the MySQL server you wish to compare configurations against.
-
-_Setting Up the Environment_:
-1. **Install Go**: Download and install the Go language runtime from the [official Go website](https://golang.org/dl/). Follow the installation instructions specific to your operating system.
-2. **Set Go Environment Variables**: Configure your Go workspace by setting the `GOPATH` and `GOROOT` environment variables as per the Go documentation.
-3. **Clone the Repository**: Clone the db-mysql-conf-diff repository from its source to your local Go workspace.
-4. **Build the Tool**: Navigate to the cloned repository directory and run `go build` to compile the application.
-
-_External Dependencies_:
-db-mysql-conf-diff has several external dependencies which need to be installed:
-
-1. **MySQL Client Libraries**: The tool requires MySQL client libraries for database communication. Install these libraries based on your operating system's package manager.
-2. **Go MySQL Driver**: This is a Go-based MySQL driver needed for database interactions. It can be installed using Go's package manager with `go get -u github.com/go-sql-driver/mysql`.
-
-After setting up the environment and installing the necessary dependencies, you should be able to run db-mysql-conf-diff successfully to compare and synchronize MySQL configurations.
-
-Be sure to follow the [GitHub logo guidelines](https://github.com/logos).
 
 ## License 
 
