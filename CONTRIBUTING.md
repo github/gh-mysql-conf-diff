@@ -61,6 +61,31 @@ To run the unit test suite:
    go test ./...
    ```
 
+## Coding Conventions
+
+Our codebase adheres to certain coding conventions. Before you contribute, please make sure to follow them:
+
+1. **Formatting**: We use `gofmt` to automatically format our code. Please make sure to run `gofmt -s -w .` on your code before committing.
+
+2. **Naming**: We prefer short, concise names for local variables and more descriptive names for exported functions and variables. Acronyms should be all uppercase.
+
+3. **Error Handling**: Always check errors and handle them immediately. Do not ignore errors or use panic for normal error handling.
+
+4. **Comments**: Write a comment for every exported function, variable, and type. The comment should start with the name of the thing it's describing.
+
+5. **Packages**: Each package should have a single purpose and provide a clean, simple API. The package name should be a noun, and the functions in the package should be actions on that noun.
+
+6. **Testing**: Write tests for your code. Test functions should be named `TestXxx`, where `Xxx` is the name of the function being tested.
+
+We use several tools to maintain the quality of our codebase:
+
+- `golint`: Checks the code for style issues. Run it on your code to make sure it adheres to our style guide.
+- `go vet`: Checks the code for common errors. Run it on your code to catch any potential issues.
+- `staticcheck`: A static analysis tool that checks for a wide range of issues. We recommend running it on your code.
+- `golangci-lint`: A fast Go linters runner. We use it in our CI/CD pipeline to catch any issues before they get merged.
+
+Remember, these are conventions and tools to help write better code. Always use your best judgment and consider the specific needs of your project.
+
 ## Submitting a pull request
 
 1. [Fork][fork] and clone the repository
