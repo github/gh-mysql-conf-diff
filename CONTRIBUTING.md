@@ -44,11 +44,22 @@ These are one time installations required to be able to test your changes locall
 1. [install golangci-lint](https://golangci-lint.run/usage/install/#local-installation)
 
 ## Building and testing code
-...
 
-## Coding conventions
+### Compiling the Binary
 
-...
+To compile the binary from the source, from the root of the project run the following command. This will create an executable in the `bin/mysql-conf-diff/` directory.
+
+   ```sh
+   go build -o bin/mysql-conf-diff/mysql-conf-diff ./cmd/mysql-conf-diff/
+   ```
+
+### Running unit tests
+
+To run the unit test suite:
+
+   ```sh
+   go test ./...
+   ```
 
 ## Submitting a pull request
 
