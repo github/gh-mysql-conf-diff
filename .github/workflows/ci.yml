@@ -8,8 +8,8 @@ on:
 
 jobs:
 
-  build:
-    name: Build
+  test:
+    name: Run unit tests
     runs-on: ubuntu-latest
     steps:
 
@@ -26,3 +26,24 @@ jobs:
 
     - name: Run tests
       run: go test -v ./...
+
+  validate-docs:
+    name: Validate the docs
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Download validate-markdown-docs
+      run: git clone -b 0.1.0 https://github.com/adamsc64/validate-markdown-docs /tmp/validate-markdown-docs
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2.2'
+
+    - name: Validate the docs
+      run: |
+        cd /tmp/validate-markdown-docs
+        ./validate-markdown-docs ${{ github.workspace }}
