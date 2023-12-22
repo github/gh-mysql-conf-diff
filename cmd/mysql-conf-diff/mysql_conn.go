@@ -66,7 +66,7 @@ func (db *dbConn) getVariables() (map[string]any, error) {
 	serverVariables := make(map[string]any)
 	for rows.Next() {
 		var key, value string
-		err := rows.Scan(&key, &value)
+		err = rows.Scan(&key, &value)
 		if err != nil {
 			return nil, err
 		}
