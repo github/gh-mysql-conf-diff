@@ -47,3 +47,15 @@ jobs:
       run: |
         cd /tmp/validate-markdown-docs
         ./validate-markdown-docs ${{ github.workspace }}
+
+  golangci-lint:
+    name: Run golangci-lint
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out source code
+      uses: actions/checkout@v2
+    - name: Run golangci-lint
+      uses: golangci/golangci-lint-action@v2
+      with:
+        version: v1.55.2
+        working-directory: .
