@@ -8,7 +8,7 @@ on:
 
 jobs:
   validate-docs:
-    name: Validate Markdown Docs
+    name: Run validate-markdown-docs
     runs-on: ubuntu-latest
     steps:
 
