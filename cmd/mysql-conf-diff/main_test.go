@@ -8,13 +8,8 @@ import (
 
 	"github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )
-
-type MockdbConn struct {
-	mock.Mock
-}
 
 func TestMysqlConfDiff_DiffNoApply(t *testing.T) {
 	// Prepare dependencies and inputs
