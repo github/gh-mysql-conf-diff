@@ -1,4 +1,4 @@
-name: Go
+name: Validate Markdown Docs
 
 on:
   push:
@@ -7,28 +7,8 @@ on:
     branches: [ main ]
 
 jobs:
-
-  test:
-    name: Run unit tests
-    runs-on: ubuntu-latest
-    steps:
-
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: 1.21.5
-
-    - name: Check out the repository
-      uses: actions/checkout@v2
-
-    - name: Get dependencies
-      run: go mod download
-
-    - name: Run tests
-      run: go test -v ./...
-
   validate-docs:
-    name: Validate the docs
+    name: Validate Markdown Docs
     runs-on: ubuntu-latest
     steps:
 
