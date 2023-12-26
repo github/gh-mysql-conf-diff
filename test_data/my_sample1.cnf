@@ -1,0 +1,2 @@
+[mysqld]
+connect_timeout=60

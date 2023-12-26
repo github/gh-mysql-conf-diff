@@ -49,6 +49,25 @@ To compile the binary from the source, from the root of the project run the foll
    go build -o bin/mysql-conf-diff/mysql-conf-diff ./cmd/mysql-conf-diff/
    ```
 
+### Starting a development database with docker-compose
+
+The repository contains helpful a helpful docker-compose configuration to start up mysqld in a container for testing and development work. To start mysql, run this command from the project root:
+
+   ```sh
+   docker-compose up -d mysql-database
+   ```
+
+Once the database is up, you can run some sample diff operations using the files in `test_data/`:
+
+   ```sh
+   $ bin/mysql-conf-diff/mysql-conf-diff test_data/my_sample1.cnf localhost:3306
+
+   Difference found for: CONNECT_TIMEOUT
+     my.cnf:    60
+     mysqld:    10
+   ```
+
+
 ## Coding Conventions
 
 Our codebase adheres to certain coding conventions. Before you contribute, please make sure to follow them:
