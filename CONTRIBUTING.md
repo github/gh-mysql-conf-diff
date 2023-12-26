@@ -67,6 +67,13 @@ Once the database is up, you can run some sample diff operations using the files
      mysqld:    10
    ```
 
+To connect to mysql using the console:
+
+   ```sh
+   $ docker-compose exec mysql-database mysql -uroot -p
+   ```
+
+and use the password for the test database as defined in [docker-compose.yml](docker-compose.yml).
 
 ## Coding Conventions
 
