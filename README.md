@@ -2,7 +2,7 @@
 
 _Description_: 
 
-`mysql-conf-diff` is a utility tool designed for database administrators and developers working with MySQL. It compares my.cnf configuration files on disk with settings of a running MySQL server, highlighting any differences. It's particularly useful for ensuring consistency in MySQL server configurations. Written in Go, it differs from similar tools by its ability to apply detected configuration changes directly to the server and its support for version-specific configuration blocks.
+This tool provides a reliable and efficient way to ensure consistency between MySQL server variables and config option files. The utility compares `my.cnf` configuration files on disk with variables of a running MySQL server, providing easy visualization of any differences. Written in Go, the tool differs from similar tools by its ability to apply detected configuration changes directly to the server and its support for version-specific configuration blocks.
 
 _Current project status_:
 
