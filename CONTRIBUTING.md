@@ -2,7 +2,7 @@
 
 [fork]: https://github.com/github/gh-mysql-conf-diff/fork
 [pr]: https://github.com/github/gh-mysql-conf-diff/compare
-[style]: https://github.com/github/gh-mysql-conf-diff/blob/main/.golangci.yaml
+[style]: https://github.com/github/gh-mysql-conf-diff/blob/main/.golangci.yml
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
 Hi there! We're happy that you'd like to contribute to this project.
@@ -95,7 +95,6 @@ We use `golangci-lint` to maintain the quality of our codebase. We use it in our
 ## Submitting a pull request
 
 1. [Fork][fork] and clone the repository
-1. Configure and install the dependencies: `script/bootstrap`
 1. Make sure the tests pass on your machine: `go test -v ./...`
 1. Make sure linter passes on your machine: `golangci-lint run`
 1. Create a new branch: `git checkout -b my-branch-name`
