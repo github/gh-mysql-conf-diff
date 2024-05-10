@@ -13,7 +13,7 @@ Contributions to this project are [released](https://help.github.com/articles/gi
 To run `gh-mysql-conf-diff`, you need an environment capable of running Go (Golang) applications. The minimum requirements are:
 
 1. **Go (Golang) Environment**: The tool is developed in Go, so you need to have Go installed on your system. Ensure you have at least the version of Go in [go.mod](go.mod) for optimal compatibility.
-2. **MySQL Server Access**: As the tool interacts with MySQL servers, you must have network access to a MySQL server you wish to compare configurations against.
+2. **MySQL Server Access**: As the tool interacts with MySQL servers, you must have network access to a MySQL server you wish to compare configurations against. This can be a MySQL server running on `localhost`.
 
 ### Setting Up the Environment
 1. **Install Go**: You have two primary options for installing Go:
