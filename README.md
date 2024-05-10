@@ -57,8 +57,6 @@ This project is licensed under the terms of the MIT open source license. Please 
 
 ## Support
 
-## Support
-
 Here are our support expectations:
 
 1. **Community Support**: Our primary support channel is through our community. Users are encouraged to share their experiences, solutions, and best practices among each other. For general questions or discussions, please use [community forum link or communication channel].
