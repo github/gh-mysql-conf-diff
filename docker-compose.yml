@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   development:
     image: mcr.microsoft.com/vscode/devcontainers/universal:latest
