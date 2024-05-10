@@ -3,7 +3,6 @@
 [fork]: https://github.com/github/gh-mysql-conf-diff/fork
 [pr]: https://github.com/github/gh-mysql-conf-diff/compare
 [style]: https://github.com/github/gh-mysql-conf-diff/blob/main/.golangci.yml
-[code-of-conduct]: CODE_OF_CONDUCT.md
 
 Hi there! We're happy that you'd like to contribute to this project.
 
