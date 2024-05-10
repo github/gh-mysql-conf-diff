@@ -1,5 +1,5 @@
 {
-    "name": "Develop on mysql-conf-diff",
+    "name": "Develop on gh-mysql-conf-diff",
     "dockerComposeFile": "../docker-compose.yml",
     "service": "development"
 }

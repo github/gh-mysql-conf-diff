@@ -7,7 +7,7 @@ This project uses GitHub issues to track bugs and feature requests. Please searc
 
 For help or questions about using this project, please reach out on [DBAChat on Slack](https://dbachat.slack.com/).
 
-**mysql-conf-diff** is not actively developed but is maintained by GitHub staff **AND THE COMMUNITY**. We will do our best to respond to support and community questions in a timely manner. 
+**gh-mysql-conf-diff** is not actively developed but is maintained by GitHub staff **AND THE COMMUNITY**. We will do our best to respond to support and community questions in a timely manner.
 
 ## GitHub Support Policy
 

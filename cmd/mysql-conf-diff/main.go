@@ -1,4 +1,4 @@
-// Utility: mysql-conf-diff
+// Utility: gh-mysql-conf-diff
 //
 // This utility prints a diff between `my.cnf` on disk with a running MySQL
 // server and optionally applies the changes found to the server. The program
@@ -7,7 +7,7 @@
 //
 // A simple run of the utility might be as follows:
 //
-//	$ mysql-conf-diff /etc/mysql/my.cnf localhost:3306
+//	$ gh-mysql-conf-diff /etc/mysql/my.cnf localhost:3306
 //
 //	Difference found for: CONNECT_TIMEOUT
 //	  my.cnf:    60
@@ -17,7 +17,7 @@
 // changes, use the `--apply-changes` flag. This is not enabled by default. If
 // you run `--apply-changes` you need to use `--watch-options“ as well:
 //
-//	$ mysql-conf-diff /etc/mysql/my.cnf localhost:3306 \
+//	$ gh-mysql-conf-diff /etc/mysql/my.cnf localhost:3306 \
 //	   --watch-options connect_timeout,delay_key_write --apply-changes
 //
 // The program needs to connect to MySQL with a user that has the correct

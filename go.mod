@@ -1,4 +1,4 @@
-module github.com/github/mysql-conf-diff
+module github.com/github/gh-mysql-conf-diff
 
 go 1.21.3
 
