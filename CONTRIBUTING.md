@@ -90,12 +90,7 @@ Our codebase adheres to certain coding conventions. Before you contribute, pleas
 
 6. **Testing**: Write tests for your code. Test functions should be named `TestXxx`, where `Xxx` is the name of the function being tested.
 
-We use several tools to maintain the quality of our codebase:
-
-- `golint`: Checks the code for style issues. Run it on your code to make sure it adheres to our style guide.
-- `go vet`: Checks the code for common errors. Run it on your code to catch any potential issues.
-- `staticcheck`: A static analysis tool that checks for a wide range of issues. We recommend running it on your code.
-- `golangci-lint`: A fast Go linters runner. We use it in our CI/CD pipeline to catch any issues before they get merged. The linter configuration is at `.golangci.yml`.
+We use `golangci-lint` to maintain the quality of our codebase. We use it in our CI/CD pipeline to catch any issues before they get merged. The linter configuration is at `.golangci.yml`.
 
 ## Submitting a pull request
 
