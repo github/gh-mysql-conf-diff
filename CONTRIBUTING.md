@@ -21,15 +21,14 @@ To run `gh-mysql-conf-diff`, you need an environment capable of running Go (Gola
    - **Option 2**: If you're a macOS user and have Homebrew installed, you can install Go using the Homebrew package manager. Simply run the following command in your terminal: `brew install go`. For more details, visit the [Go formulae on Homebrew](https://formulae.brew.sh/formula/go).
 2. **Set Go Environment Variables**: Configure your Go workspace by setting the `GOPATH` and `GOROOT` environment variables as per the Go documentation.
 3. **Clone the Repository**: Clone the `gh-mysql-conf-diff` repository from its source to your local Go workspace.
-4. **Build the Tool**: Navigate to the cloned repository directory and run `go build` to compile the application.
 
 ### External Dependencies
-mysql-conf-diff has several external dependencies which need to be installed:
+There are several external dependencies which need to be installed:
 
 1. **MySQL Client Libraries**: The tool requires MySQL client libraries for database communication. Install these libraries based on your operating system's package manager.
-2. **Go MySQL Driver**: This is a Go-based MySQL driver needed for database interactions. All dependencies, including this one, are listed in `go.sum` and `go.mod`. To install, you should use the `go mod download` command. This command downloads all dependencies and stores them in the local module cache.
+2. **Go MySQL Driver**: This is a Go-based MySQL driver needed for database interactions. All dependencies, including this one, are listed in `go.sum` and `go.mod`. Installation should be automatic at `go build` or `go run` like any other Go dependency.
 
-After setting up the environment and installing the necessary dependencies, you should be able to run `gh-mysql-conf-diff` successfully to compare and synchronize MySQL configurations.
+After setting up the environment and installing the necessary dependencies, you should be able to build `gh-mysql-conf-diff` successfully.
 
 ## Building and testing code
 
