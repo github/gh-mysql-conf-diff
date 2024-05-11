@@ -1,7 +1,5 @@
 ## gh-mysql-conf-diff
 
-[issues]: https://github.com/github/gh-mysql-conf-diff/issues
-
 _Description_: 
 
 This tool provides a reliable and efficient way to ensure consistency between MySQL server variables and config option files. The utility compares `my.cnf` configuration files on disk with variables of a running MySQL server, providing easy visualization of any differences. Written in Go, the tool differs from similar tools by its ability to apply detected configuration changes directly to the server and its support for version-specific configuration blocks.
@@ -40,7 +38,7 @@ you run `--apply-changes` you need to use `--watch-options` as well:
 **Development Roadmap and Contributions**
 
 _Development Roadmap_:
-For a detailed view of our open issues, please refer to our [tracker](issues). Please feel free to submit feature requests or bugs.
+For a detailed view of our open issues, please refer to our [tracker](https://github.com/github/gh-mysql-conf-diff/issues). Please feel free to submit feature requests or bugs.
 
 _Contributions_:
 We highly value contributions from the community and encourage developers, database administrators, and other interested individuals to contribute to `gh-mysql-conf-diff`. Whether it's by reporting bugs, suggesting enhancements, or submitting code changes, your input is important to the growth and improvement of this tool.
@@ -61,8 +59,8 @@ Please refer to [the license information](./LICENSE.txt) for the full terms.
 
 Here are our support expectations:
 
-1. **Community Support**: Our primary support channel is through our community. Users are encouraged to share their experiences, solutions, and best practices among each other. For general questions or discussions, please use [community forum link or communication channel].
-1. **Issue Tracker**: For reporting bugs or requesting new features, please use our issue tracker [link to issue tracker]. This platform is regularly monitored by our team, and we aim to respond to each issue appropriately.
+1. **Community Support**: For general questions or discussions, please reach out to the community on the [DBAChat Slack](https://dbachat.slack.com/).
+1. **Issue Tracker**: For reporting bugs or requesting new features, please use our [issue tracker](https://github.com/github/gh-mysql-conf-diff/issues).
 1. **Contribution**: Users who wish to contribute fixes or improvements are welcome to do so. Please refer to our [contribution guidelines](CONTRIBUTING.md) for more information on how to contribute.
 
 Please note that as an open-source project, support is largely dependent on the availability and capacity of our community and development team. We appreciate your understanding and patience.
