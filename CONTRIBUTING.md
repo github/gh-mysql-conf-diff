@@ -15,17 +15,9 @@ To run `gh-mysql-conf-diff`, you need an environment capable of running Go (Gola
 2. **MySQL Server Access**: As the tool interacts with MySQL servers, you must have network access to a MySQL server you wish to compare configurations against. This can be a MySQL server running on `localhost`.
 
 ### Setting Up the Environment
-1. **Install Go**: You have two primary options for installing Go:
-   - **Option 1**: Download and install the Go language runtime directly from the [official Go website](https://go.dev/doc/install). The site provides installation instructions tailored to various operating systems.
-   - **Option 2**: If you're a macOS user and have Homebrew installed, you can install Go using the Homebrew package manager. Simply run the following command in your terminal: `brew install go`. For more details, visit the [Go formulae on Homebrew](https://formulae.brew.sh/formula/go).
-2. **Set Go Environment Variables**: Configure your Go workspace by setting the `GOPATH` and `GOROOT` environment variables as per the Go documentation.
-3. **Clone the Repository**: Clone the `gh-mysql-conf-diff` repository from its source to your local Go workspace.
 
-### External Dependencies
-There are several external dependencies which need to be installed:
-
-1. **MySQL Client Libraries**: The tool requires MySQL client libraries for database communication. Install these libraries based on your operating system's package manager.
-2. **Go MySQL Driver**: This is a Go-based MySQL driver needed for database interactions. All dependencies, including this one, are listed in `go.sum` and `go.mod`. Installation should be automatic at `go build` or `go run` like any other Go dependency.
+1. **Install Prerequisites**: Follow the instructions in the [README](README.md#requirements) how to install Go and mysql client libraries.
+1. **Clone the Repository**: Instead of running `go install`, clone the `gh-mysql-conf-diff` repository to your local development environment.
 
 After setting up the environment and installing the necessary dependencies, you should be able to build `gh-mysql-conf-diff` successfully.
 
@@ -33,7 +25,7 @@ After setting up the environment and installing the necessary dependencies, you 
 
 ### Running unit tests
 
-To run the unit test suite:
+Before building the binary, you might want to run the unit test suite to ensure everything is set up correctly with your Go environment. To do this:
 
    ```sh
    go test ./...
