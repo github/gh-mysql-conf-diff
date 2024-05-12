@@ -16,7 +16,7 @@ To run `gh-mysql-conf-diff`, you need an environment capable of running Go (Gola
 
 ### Setting Up the Environment
 
-1. **Install Prerequisites**: Follow the instructions in the [README](README.md#requirements) how to install Go and mysql client libraries.
+1. **Install Prerequisites**: Follow the "Requirements" instructions in the [README](README.md) how to install Go and mysql client libraries.
 1. **Clone the Repository**: Instead of running `go install`, clone the `gh-mysql-conf-diff` repository to your local development environment.
 
 After setting up the environment and installing the necessary dependencies, you should be able to build `gh-mysql-conf-diff` successfully.
