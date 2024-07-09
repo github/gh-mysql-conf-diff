@@ -28,7 +28,7 @@ After setting up the environment and installing the necessary dependencies, you 
 Before building the binary, you might want to run the unit test suite to ensure everything is set up correctly with your Go environment. To do this:
 
    ```sh
-   go test ./...
+   make test
    ```
 
 ### Compiling the Binary
@@ -36,7 +36,7 @@ Before building the binary, you might want to run the unit test suite to ensure 
 To compile the binary from the source, from the root of the project run the following command. This will create an executable in the `bin/gh-mysql-conf-diff/` directory.
 
    ```sh
-   go build -o bin/gh-mysql-conf-diff/gh-mysql-conf-diff ./cmd/gh-mysql-conf-diff/
+   make build
    ```
 
 ### Starting a development database with docker-compose
@@ -86,7 +86,7 @@ We use `golangci-lint` to maintain the quality of our codebase. We use it in our
 ## Submitting a pull request
 
 1. [Fork][fork] and clone the repository
-1. Make sure the tests pass on your machine: `go test -v ./...`
+1. Make sure the tests pass on your machine: `make test`
 1. Make sure linter passes on your machine: `golangci-lint run`
 1. Create a new branch: `git checkout -b my-branch-name`
 1. Make your change, add tests, and make sure the tests and linter still pass
