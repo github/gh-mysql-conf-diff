@@ -83,6 +83,7 @@ Please refer to [the license information](./LICENSE.txt) for the full terms.
 ## Authorship and Maintainers
 
 _Author:_ [@adamsc64](https://github.com/adamsc64)
+_Maintainers:_ [@adamsc64](https://github.com/adamsc64) [@rashiq](https://github.com/rashiq)
 
 ## Support
 
