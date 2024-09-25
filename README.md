@@ -1,10 +1,28 @@
-## gh-mysql-conf-diff
+# gh-mysql-conf-diff
 
 _Description_: 
 
 This tool provides a reliable and efficient way to ensure consistency between MySQL server variables and config option files. The utility compares `my.cnf` configuration files on disk with variables of a running MySQL server, providing easy visualization of any differences. Written in Go, the tool differs from similar tools by its ability to apply detected configuration changes directly to the server and its support for version-specific configuration blocks.
 
-_Current project status_:
+## Example Usage
+
+A simple run of the utility might be as follows:
+```
+$ gh-mysql-conf-diff /etc/mysql/my.cnf localhost:3306 --watch-options connect_timeout,delay_key_write
+
+Difference found: CONNECT_TIMEOUT
+  my.cnf:    60
+  mysqld:    30
+```
+
+By default the utility runs in read only (informational mode). To apply the
+changes, use the `--apply-changes` flag. This is not enabled by default. If
+you run `--apply-changes` you need to use `--watch-options` as well:
+
+	$ gh-mysql-conf-diff /etc/mysql/my.cnf localhost:3306 \
+	   --watch-options connect_timeout,delay_key_write --apply-changes
+
+## Current Project Status
 
 The project is open to pull requests and the utility is actively used in production at GitHub.
 
@@ -23,15 +41,6 @@ _Limitations_:
 
 _Goals and Scope_:
 The primary goal of `gh-mysql-conf-diff` is to provide a reliable and efficient way to ensure consistency between MySQL server configurations and `my.cnf` files. It aims to streamline the configuration management process, reduce errors, and save time for database administrators. The utility is scoped to focus on comparing and optionally synchronizing configurations, without delving into other aspects of database management.
-
-### Example Usage
-
-By default the utility runs in read only (informational mode). To apply the
-changes, use the `--apply-changes` flag. This is not enabled by default. If
-you run `--apply-changes` you need to use `--watch-options` as well:
-
-	$ gh-mysql-conf-diff /etc/mysql/my.cnf localhost:3306 \
-	   --watch-options connect_timeout,delay_key_write --apply-changes
 
 ## Background 
 
@@ -71,9 +80,9 @@ To run `gh-mysql-conf-diff`, you need an environment capable of running Go (Gola
 
 Please refer to [the license information](./LICENSE.txt) for the full terms.
 
-## Maintainers 
+## Authorship and Maintainers
 
-[@adamsc64](https://github.com/adamsc64)
+_Author:_ [@adamsc64](https://github.com/adamsc64)
 
 ## Support
 
