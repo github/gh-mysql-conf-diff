@@ -5,6 +5,7 @@ import (
 	"reflect"
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/assert"
@@ -42,7 +43,7 @@ func TestMysqlConfDiff_DiffApply(t *testing.T) {
 	// Prepare dependencies and inputs
 	conn, m, err := sqlmock.New()
 	require.NoError(t, err)
-	db := &dbConn{conn: conn}
+	db := &dbConn{conn: conn, timeout: 5 * time.Second}
 	defer db.close()
 
 	confOptions := map[string]any{"key1": "value1"}

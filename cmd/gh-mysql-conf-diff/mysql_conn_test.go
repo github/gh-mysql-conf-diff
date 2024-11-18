@@ -2,6 +2,7 @@ package main
 
 import (
 	"testing"
+	"time"
 
 	"github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/require"
@@ -22,7 +23,7 @@ func TestApplySetting_Int_Success(t *testing.T) {
 
 	defer db.Close()
 
-	d := &dbConn{conn: db}
+	d := &dbConn{conn: db, timeout: 5 * time.Second}
 
 	mock.ExpectExec(`SET GLOBAL MAX_CONNECTIONS = \?`).
 		WithArgs(1000).
@@ -39,7 +40,7 @@ func TestApplySetting_Str_Success(t *testing.T) {
 
 	defer db.Close()
 
-	d := &dbConn{conn: db}
+	d := &dbConn{conn: db, timeout: 5 * time.Second}
 
 	mock.ExpectExec(`SET GLOBAL CHARACTER_SET_SERVER = \?`).
 		WithArgs("utf8mb4").
