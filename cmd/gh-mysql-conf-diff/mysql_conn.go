@@ -102,6 +102,9 @@ func (db *dbConn) close() error {
 // Gets MySQL version from server and returns it as a rich object.
 func (db *dbConn) getVersion() (MySQLVersion, error) {
 	firstResult, err := db.getOne("SELECT VERSION()")
+	if err != nil {
+		return MySQLVersion{}, err
+	}
 
 	version, err := ParseVersion(firstResult)
 	if err != nil {
