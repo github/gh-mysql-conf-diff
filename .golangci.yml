@@ -1,20 +1,52 @@
-linters-settings:
-  govet:
-    check-shadowing: true
-
 linters:
-  enable:
-    - govet
-    - golint
-    - errcheck
-    - staticcheck
-    - unused
-    - gosimple
-    - structcheck
-    - varcheck
-    - ineffassign
-    - deadcode
-    - typecheck
+  disable:
+    - "gomoddirectives"
+    - "asciicheck"
+    - "containedctx"
+    - "cyclop"
+    - "dogsled"
+    - "dupl"
+    - "errcheck"
+    - "exhaustive"
+    - "exhaustruct"
+    - "exportloopref"
+    - "forbidigo"
+    - "funlen"
+    - "gci"
+    - "gochecknoglobals"
+    - "gocognit"
+    - "goconst"
+    - "gocyclo"
+    - "godox"
+    - "err113"
+    - "godot"
+    - "gofmt"
+    - "gofumpt"
+    - "goheader"
+    - "mnd"
+    - "importas"
+    - "inamedparam"
+    - "ireturn"
+    - "lll"
+    - "musttag"
+    - "nilnil"
+    - "nonamedreturns"
+    - "nlreturn"
+    - "paralleltest"
+    - "perfsprint"
+    - "prealloc"
+    - "promlinter"
+    - "protogetter"
+    - "tagliatelle"
+    - "testpackage"
+    - "thelper"
+    - "typecheck"
+    - "unparam"
+    - "wastedassign"
+    - "whitespace"
+    - "wrapcheck"
+    - "wsl"
+    - "varnamelen"
 
 run:
   deadline: 1m

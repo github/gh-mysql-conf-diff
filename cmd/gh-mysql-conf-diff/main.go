@@ -30,7 +30,9 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strconv"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -99,9 +101,19 @@ func getDB(context *RunContext) (db *dbConn, err error) {
 		return nil, fmt.Errorf("failed to get MySQL user info: %w", err)
 	}
 
+	// Parse the server and port information
+	parts := strings.Split(context.serverAndPort, ":")
+	if len(parts) != 2 {
+		return nil, fmt.Errorf("invalid server and port: %s", context.serverAndPort)
+	}
+	server, portStr := parts[0], parts[1]
+	port, err := strconv.Atoi(portStr)
+	if err != nil {
+		return nil, fmt.Errorf("invalid port: %s", portStr)
+	}
+
 	// Connect to the MySQL server
-	db, err = connect(fmt.Sprintf(
-		"%s:%s@tcp(%s)/", user, password, context.serverAndPort))
+	db, err = connect(user, password, server, port, 5*time.Second)
 	if err != nil {
 		return nil, fmt.Errorf("failed to connect to MySQL: %w", err)
 	}
