@@ -13,13 +13,13 @@ jobs:
     steps:
 
     - name: Check out the repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
 
     - name: Download validate-markdown-docs
       run: git clone -b 0.1.0 https://github.com/adamsc64/validate-markdown-docs /tmp/validate-markdown-docs
 
     - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1.321.0
       with:
         ruby-version: '3.2.2'
 
